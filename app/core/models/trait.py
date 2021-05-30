@@ -26,7 +26,8 @@ class Trait(models.Model):
                 if choice_abilities:
                     for ability in choice_abilities:
                         if ability.level:
-                            ability_list.append(f'{ability.ability.name} {ability.level}')
+                            ability_list.append(f'{ability.ability.name} '
+                                                f'{ability.level}')
                         else:
                             ability_list.append(f'{ability.ability.name}')
         abilities = ', '.join(ability_list)

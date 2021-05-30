@@ -9,7 +9,8 @@ class InlineEditLinkMixin(object):
         if obj.id:
             opts = self.model._meta
             return "<a href='%s' target='_blank'>%s</a>" % (reverse(
-                'admin:%s_%s_change' % (opts.app_label, opts.object_name.lower()),
+                'admin:%s_%s_change' % (opts.app_label, opts.object_name
+                                        .lower()),
                 args=[obj.id]
             ), self.edit_label)
         else:

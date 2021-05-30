@@ -1,5 +1,3 @@
-from django.contrib import admin
-
 from treenode.admin import TreeNodeModelAdmin
 from treenode.forms import TreeNodeForm
 
